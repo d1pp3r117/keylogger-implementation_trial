@@ -1,4 +1,4 @@
-# keylogger-implementation_trial
+# keylogger-implementation
 My First shot at coding a keylogger 
 I have been having trouble focusing on this for a while now.. so developement was slow
 but i have managed to bring get it closer to a working model....
